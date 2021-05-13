@@ -29,10 +29,34 @@ It is a structural design pattern that lets you provide a substitute or placehol
 ###### Example : 
 A cheque or credit card is a proxy for what is in our bank account. It can be used in place of cash, and provides a means of accessing that cash when required. Both implement the same interface: they can be used for making a payment. A consumer feels great because there’s no need to carry loads of cash around. A shop owner is also happy since the income from a transaction gets added electronically to the shop’s bank account without the risk of losing the deposit or getting robbed on the way to the bank.
 ###### Advantages :
-- Open/Closed Principle. You can introduce new proxies without changing the service or clients.
+- You can introduce new proxies without changing the service or clients.
 - It avoids duplication of objects which might be huge size and memory intensive.
-- One of the advantages of Proxy pattern is security. t provides the protection to the original object from the outside world.
+- One of the advantages of Proxy pattern is security. It provides the protection to the original object from the outside world.
 ###### Disadvantages :
 - The code may become more complicated since you need to introduce a lot of new classes.
 - The response from the service might get delayed.
 
+
+### OBSERVER
+
+It is a behavioral design pattern. It is like a subscription mechanism to notify multiple objects about any events that happen to the object they’re observing. The Observer Pattern defines a one to many dependency between objects so that one object changes state, all of its dependents are notified and updated automatically. It is used when the change of a state in one object must be reflected in another object
+###### Example :
+Social media, RSS feeds, email subscription in which you have the option to follow or subscribe and you receive latest notification.
+###### Advantages :
+- It provides the support for broadcast-type communication
+- A loosely coupled design between objects that interact, which means that the interacting objects should have less information about each other.
+###### Disadvantages :
+- Subscribers are notified in random order.
+- It will be the cause of large complexity code if not implemented properly.
+
+
+### STATE
+
+It is a behavioral design pattern. It lets an object alter its behavior when its internal state changes. The behavior gets changed at runtime depending on the state. It is used when the operations have large, multipart conditional statements that depend on the state of an object.
+###### Example :
+ATM machine, you can not perform any transaction until you swipe the card, and change the machine state to card swiped.
+###### Advantages :
+- Simplify the code by eliminating bulky state machine conditional statements, minimize conditional complexity.
+- Introduce new states without changing existing state classes or the context.
+###### Disadvantages :
+- If a state machine has only a few states or rarely changes, it makes it unnecessary.
